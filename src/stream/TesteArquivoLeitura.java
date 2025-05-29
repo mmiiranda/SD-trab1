@@ -5,7 +5,7 @@ import java.io.*;
 
 public class TesteArquivoLeitura {
     public static void main(String[] args) {
-        try (FileInputStream fis = new FileInputStream("livros.dat")) {
+        try (FileInputStream fis = new FileInputStream("data/livros.dat")) {
             LivroInputStream in = new LivroInputStream(fis, 30);
             Livro[] livros = in.lerLivros();
 
