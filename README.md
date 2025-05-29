@@ -25,8 +25,6 @@ SD-trab1/
 * `Publicacao.java` (superclasse)
 * `Biblioteca.java`, `GestaoDeBiblioteca.java` (modelo do serviço)
 
-✅ **Implementado.**
-
 ---
 
 ## 2. Subclasse de OutputStream personalizada
@@ -72,8 +70,6 @@ Depois o cliente:
 java -cp bin stream.TesteTCP
 ```
 
-✅ **Implementado.**
-
 ---
 
 ## 3. Subclasse de InputStream personalizada
@@ -100,8 +96,6 @@ java -cp bin stream.TesteArquivoLeitura
 
 Executado junto ao `ServidorTCP`
 
-✅ **Implementado.**
-
 ---
 
 ## 4. Serialização com cliente-servidor TCP (binário)
@@ -110,18 +104,6 @@ Executado junto ao `ServidorTCP`
 
 * `stream.TesteTCP` envia
 * `stream.ServidorTCP` recebe
-
-✅ Empacotamento/desempacotamento implementado via stream customizada (binária).
-
----
-
-## 5. Serialização usando JSON (extra)
-
-**Pastas:** `src/tcp_json/`
-
-* `Livro` serializado com `Gson`
-* `LivroJSONOutputStream.java` (opcional)
-* `ClienteJSON.java` e `ServidorJSON.java`
 
 ### Compilar:
 
