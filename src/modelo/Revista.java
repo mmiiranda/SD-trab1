@@ -1,3 +1,8 @@
+package modelo;
+import  modelo.GestaoDeBiblioteca;
+import java.util.ArrayList;
+import java.util.List;  
+
 public class Revista extends Publicacao {
     private int numeroEdicao;
     private String periodicidade;

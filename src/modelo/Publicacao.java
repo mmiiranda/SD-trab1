@@ -1,3 +1,9 @@
+package modelo;
+import modelo.GestaoDeBiblioteca;
+import java.util.ArrayList;
+import java.util.List;
+
+
 import java.io.Serializable;
 
 public class Publicacao implements Serializable {

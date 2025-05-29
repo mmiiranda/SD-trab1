@@ -1,3 +1,8 @@
+package stream;
+
+import modelo.Livro; // importa a classe Livro de outro pacote
+import java.io.*;
+
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.DataOutputStream;
@@ -15,22 +20,25 @@ public class LivroOutputStream extends OutputStream {
         this.bytesPorAtributo = bytesPorAtributo;
         this.outputStream = outputStream;
     }
-
     public void enviarDados() throws IOException {
         DataOutputStream dos = new DataOutputStream(outputStream);
-        
+
         dos.writeInt(numObjetosTransmitir);
-        
+
         for (int i = 0; i < numObjetosTransmitir; i++) {
             Livro livro = livros[i];
-            
+
             writeFixedSizeString(dos, livro.getTitulo(), bytesPorAtributo);    
             writeFixedSizeString(dos, livro.getAutor(), bytesPorAtributo);      
-            writeFixedSizeString(dos, livro.getEditora(), bytesPorAtributo);    
+            writeFixedSizeString(dos, livro.getEditora(), bytesPorAtributo);
+
+            dos.writeInt(livro.getAnoPublicacao());
+            dos.writeInt(livro.getNumeroPaginas());      // 💥 e isso também
         }
-        
+
         dos.flush();
     }
+
 
     private void writeFixedSizeString(DataOutputStream dos, String value, int size) throws IOException {
         byte[] bytes = value.getBytes("UTF-8");

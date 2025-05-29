@@ -1,3 +1,11 @@
+package modelo;
+
+import java.io.Serializable;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.io.DataOutputStream;
+
+
 public class Livro extends Publicacao {
     private String editora;
     private int numeroPaginas;

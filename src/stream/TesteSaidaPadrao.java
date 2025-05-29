@@ -1,7 +1,12 @@
-import java.io.FileOutputStream;
+package stream;
+
+
+import modelo.Livro;
+import java.io.*;
+
 import java.io.IOException;
 
-public class TesteArquivo {
+public class TesteSaidaPadrao {
     public static void main(String[] args) {
         Livro[] livros = {
             new Livro("Dom Casmurro", "Machado de Assis", 1899, "Livraria Garnier", 256),
@@ -9,14 +14,12 @@ public class TesteArquivo {
             new Livro("O Senhor dos Anéis", "J.R.R. Tolkien", 1954, "Allen & Unwin", 1178)
         };
 
-        try (FileOutputStream fos = new FileOutputStream("livros.dat")) {
-            
-            LivroOutputStream out = new LivroOutputStream(livros,2,30, fos);
-            
+        try {
+            System.out.println("=== TESTE SAÍDA PADRÃO (System.out) ===");
+            LivroOutputStream out = new LivroOutputStream(livros, 3, 30, System.out);
             out.enviarDados();
-            System.out.println("Dados enviados conforme especificação!");
-        } catch (IOException e){
-            System.err.println("Erro: " + e.getMessage());
+        } catch (IOException e) {
+            System.err.println("Erro ao enviar dados: " + e.getMessage());
         }
     }
 }
