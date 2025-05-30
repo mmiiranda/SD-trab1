@@ -18,7 +18,7 @@ public class TesteTCP {
             LivroOutputStream out = new LivroOutputStream(livros, livros.length, 40, socket.getOutputStream());
             out.enviarDados();
 
-            socket.shutdownOutput(); // ✨ isso aqui resolve o EOFException do servidor!
+            socket.shutdownOutput(); 
 
             System.out.println("Dados enviados para o servidor TCP!");
         } catch (IOException e) {

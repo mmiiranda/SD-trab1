@@ -16,8 +16,8 @@ public class ClienteJSON {
             PrintWriter writer = new PrintWriter(socket.getOutputStream(), true);
             BufferedReader reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 
-            writer.println(json); // envia JSON
-            String resposta = reader.readLine(); // recebe resposta
+            writer.println(json); 
+            String resposta = reader.readLine(); 
             System.out.println("Resposta do servidor: " + resposta);
         } catch (IOException e) {
             e.printStackTrace();

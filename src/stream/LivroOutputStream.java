@@ -1,6 +1,6 @@
 package stream;
 
-import modelo.Livro; // importa a classe Livro de outro pacote
+import modelo.Livro; 
 import java.io.*;
 
 import java.io.IOException;
@@ -14,7 +14,7 @@ public class LivroOutputStream extends OutputStream {
     private OutputStream outputStream;
 
     public LivroOutputStream(Livro[] livros, int numObjetosTransmitir, 
-                           int bytesPorAtributo, OutputStream outputStream) {
+        int bytesPorAtributo, OutputStream outputStream) {
         this.livros = livros;
         this.numObjetosTransmitir = Math.min(numObjetosTransmitir, livros.length);
         this.bytesPorAtributo = bytesPorAtributo;
@@ -33,7 +33,7 @@ public class LivroOutputStream extends OutputStream {
             writeFixedSizeString(dos, livro.getEditora(), bytesPorAtributo);
 
             dos.writeInt(livro.getAnoPublicacao());
-            dos.writeInt(livro.getNumeroPaginas());      // 💥 e isso também
+            dos.writeInt(livro.getNumeroPaginas());      
         }
 
         dos.flush();

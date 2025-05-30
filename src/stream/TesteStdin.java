@@ -18,7 +18,7 @@ public class TesteStdin {
             }
 
         } catch (IOException e) {
-            e.printStackTrace(); // 👈 isso mostra a causa real (stacktrace)
+            e.printStackTrace(); 
             System.err.println("Erro ao ler do System.in: " + e.getMessage());
         }
     }

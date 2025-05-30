@@ -22,7 +22,7 @@ public class ServidorTCP {
             System.out.println("=== LIVROS RECEBIDOS ===");
             for (int i = 0; i < livros.length; i++) {
                 System.out.println("\nLivro " + (i + 1) + ":");
-                System.out.println(livros[i]); // usa o toString da classe Livro ❤️
+                System.out.println(livros[i]); 
             }
 
             socket.close();

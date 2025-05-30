@@ -15,7 +15,6 @@ public class LivroInputStream extends InputStream {
 
     @Override
     public int read() throws IOException {
-        // não usado diretamente, mas precisa implementar
         return dis.read();
     }
 
