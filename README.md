@@ -2,6 +2,11 @@
 
 Este projeto implementa funcionalidades de comunicação entre processos utilizando Sockets e Streams em Java, com apoio de classes POJO, serialização personalizada (binária e JSON), e comunicação cliente-servidor via TCP.
 
+## Autores
+Maria Eduarda Santana Marques
+
+Mauricio Miranda Carneiro
+
 ## Estrutura de Pastas
 
 ```
